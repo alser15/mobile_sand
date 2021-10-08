@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+
+/sand_box/.pytest_cache/
+/sand_box/tests/.pytest_cache/
+/.pytest_cache/
+/Lib/
