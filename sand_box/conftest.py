@@ -4,6 +4,7 @@ from appium import webdriver
 
 @pytest.fixture(scope='function')
 def init_mobile_device():
+    """Инициализация драйвера"""
     desired_caps = {
         "platformName": "Android",
         "deviceName": "Samsung A10",
