@@ -22,3 +22,4 @@ def test_check_input_incorrect_sms_code(init_mobile_device):
         .remove_keyboard()\
         .click_button_next()\
         .check_error_text(test_one.error_sms_text, 'Неправильный код')
+

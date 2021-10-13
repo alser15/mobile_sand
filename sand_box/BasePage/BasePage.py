@@ -15,3 +15,5 @@ class BasePage:
 
     def check_error_text(self, element, text_error):
         assert element().text == text_error, "Текст ошибки не совпадает"
+        return self
+
