@@ -1,3 +1,5 @@
+import time
+
 from sand_box.BasePage.RegistrationPage import RegistrationPage
 
 
