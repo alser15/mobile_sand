@@ -7,10 +7,6 @@ class RegistrationPage(BasePage):
     def __init__(self, init_mobile_device):
         # Доступ к оригиналу driver
         super().__init__(init_mobile_device)
-        # Поиск банера на странице
-        self.advertising_banner = lambda: self.wait.until(
-            EC.element_to_be_clickable(
-                (By.ID, "biz.growapp.winline:id/tvAgreement")))
         # Поиск поля телефон
         self.input_phone = lambda: self.driver.find_element(By.ID, 'biz.growapp.winline:id/etRegMask')
         # Поиск поля День рождения
@@ -64,12 +60,9 @@ class RegistrationPage(BasePage):
         self.error_sms_text = lambda: self.wait.until(EC.presence_of_element_located(
             (By.XPATH,
                 "//android.widget.FrameLayout[@resource-id='biz.growapp.winline:id/vgSmsCodeField']/android.widget.FrameLayout/android.widget.TextView[@resource-id='biz.growapp.winline:id/tvReg']")))
+        self.button_catalog = lambda: self.driver.find_element(By.XPATH,
+                "//android.widget.ImageButton[@content-desc='Open navigation drawer']")
 
-    @allure.step('Клик на банер')
-    def click_on_banner(self):
-        """ Клик на банер"""
-        self.advertising_banner().click()
-        return self
 
     @allure.step('Клик на поля ввода телефона')
     def click_input_phone(self):
@@ -171,4 +164,7 @@ class RegistrationPage(BasePage):
     def click_button_next(self):
         """ Клик на кнопку продолжить """
         self.button_next().click()
+        return self
+    def click_catalocg(self):
+        self.button_catalog().click()
         return self
