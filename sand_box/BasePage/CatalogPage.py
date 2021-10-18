@@ -24,13 +24,13 @@ class CatalogPage(BasePage):
             "//android.widget.TextView[@text='ФУТБОЛ']")
         # Поиск названия Категории
         self.text_name_category = lambda : self.driver.find_element(By.XPATH,
-            "//android.widget.TextView[@text='ФНЛ | Россия']")
+            "//android.widget.TextView[@text='ФНЛ-2 | Россия']")
         # Поиск названия Города
         self.text_name_city = lambda : self.driver.find_element(By.XPATH,
-            "//android.widget.TextView[@text='Томь']")
+            "//android.widget.TextView[@text='Туапсе']")
         # Поиск названия Команды
         self.text_name_team = lambda : self.driver.find_element(By.XPATH,
-            "//android.widget.TextView[@text='СКА-Хабаровск']")
+            "//android.widget.TextView[@text='Биолог Новокубанск']")
         # Поиск даты
         self.text_name_date = lambda : self.driver.find_element(By.XPATH,
             "//android.widget.FrameLayout[@resource-id='biz.growapp.winline:id/vgAdditionalInfo']/android.widget.LinearLayout/android.widget.TextView[@resource-id='biz.growapp.winline:id/tvTime']")

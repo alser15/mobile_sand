@@ -4,3 +4,4 @@
 /sand_box/tests/.pytest_cache/
 /.pytest_cache/
 /Lib/
+/venv/

@@ -9,8 +9,8 @@ def init_mobile_device():
     """Инициализация драйвера"""
     desired_caps = {
         "platformName": "Android",
-        "deviceName": "Pixel 2 API 28",
-        "platformVersion": "9",
+        "deviceName": "Pixel XL API 30",
+        "platformVersion": "11",
         "appPackage": "biz.growapp.winline",
         "appActivity": "biz.growapp.winline.presentation.splash.SplashActivity"
     }
