@@ -15,7 +15,7 @@ class CatalogPage(BasePage):
            "//android.widget.TextView[@text='Россия']")
         # Поиск раздела ФНЛ
         self.section_footbal_russia_FNL = lambda: self.driver.find_element(By.XPATH,
-            "//android.widget.TextView[@text='ФНЛ']")
+            "//android.view.ViewGroup[@index='3']/android.widget.TextView[@index='0']")
         # Поиск коэфицента
         self.koef = lambda: self.wait.until(EC.presence_of_element_located(
             (By.XPATH, "//android.widget.FrameLayout[@resource-id='biz.growapp.winline:id/btnKoef3']/android.widget.FrameLayout[@resource-id='biz.growapp.winline:id/vgRoot']/android.widget.LinearLayout/android.widget.TextView[@resource-id='biz.growapp.winline:id/tvKoef']"))) # не тот xpath
